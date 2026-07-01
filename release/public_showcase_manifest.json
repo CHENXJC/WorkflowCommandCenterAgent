@@ -19,16 +19,17 @@
     "compileall": "passed",
     "release_check": "passed: 0 fails, 0 warnings",
     "app_import": "passed",
-    "github_readme_verification": "pending",
-    "screenshot_raw_url_verification": "pending",
+    "github_readme_verification": "passed: HTTP 200",
+    "screenshot_raw_url_verification": "passed: 8/8 HTTP 200 image/png",
+    "remote_tree_safety": "passed: 0 unsafe files",
     "validated_on": "2026-07-01"
   },
   "safety_summary": {
     "local_first": true,
     "demo_data_only": true,
     "agenthub_modified": false,
-    "remote_configured": false,
-    "pushed": false,
+    "remote_configured": true,
+    "pushed": true,
     "secrets_read": false
   },
   "next_stage": "optional-profile-pin-or-agenthub-integration",

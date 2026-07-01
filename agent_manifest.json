@@ -60,8 +60,9 @@
     "compileall": "passed",
     "release_check": "passed: 0 fails, 0 warnings",
     "app_import": "passed",
-    "github_readme_verification": "pending",
-    "screenshot_raw_url_verification": "pending",
+    "github_readme_verification": "passed: HTTP 200",
+    "screenshot_raw_url_verification": "passed: 8/8 HTTP 200 image/png",
+    "remote_tree_safety": "passed: 0 unsafe files",
     "validated_on": "2026-07-01"
   },
   "integration_notes": [

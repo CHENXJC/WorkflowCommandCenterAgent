@@ -93,6 +93,17 @@ Completed in WCC-004:
 - Verified all 8 screenshot raw URLs
 - Verified remote tree safety
 
+Publish commit:
+
+`d74bbca chore: publish WorkflowCommandCenterAgent GitHub showcase`
+
+Online verification:
+
+- GitHub README page: HTTP 200
+- Screenshot raw URLs: 8/8 HTTP 200, `image/png`
+- Remote branch: `origin/main`
+- Remote tree safety: 0 unsafe files
+
 ## Not Done In WCC-004
 
 - Did not Profile Pin

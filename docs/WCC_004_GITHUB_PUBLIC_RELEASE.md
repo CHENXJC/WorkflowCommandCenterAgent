@@ -60,8 +60,16 @@ python -c "import app; print('APP_IMPORT_OK')"
 Required online validation:
 
 - GitHub README page returns HTTP 200.
-- All eight screenshot raw URLs return HTTP 200.
+- All eight screenshot raw URLs return HTTP 200 with `image/png`.
 - Remote tree does not contain unsafe private artifacts.
+
+Recorded WCC-004 result:
+
+- GitHub README page: passed
+- Screenshot raw URL verification: passed, 8/8
+- Remote tree safety: passed, 0 unsafe files
+- Profile Pin: not done
+- AgentHubControlCenter integration: not done
 
 ## Safety Boundary
 
