@@ -1,23 +1,22 @@
 {
   "project_name": "WorkflowCommandCenterAgent",
-  "current_checkpoint": "WCC-002-AGENTHUB-READINESS",
-  "release_stage": "local-mvp-agenthub-readiness",
+  "current_checkpoint": "WCC-003-GITHUB-SHOWCASE-PREP",
+  "release_stage": "github-showcase-prep",
   "github_public_release_completed": false,
   "public_release_completed": false,
   "github_repo": "not_configured",
-  "github_showcase_ready": false,
+  "github_showcase_ready": "prep",
+  "screenshots_ready": false,
+  "screenshot_guide_ready": true,
+  "public_showcase_checklist_ready": true,
   "profile_pin_status": "not_applicable_yet",
   "profile_pin_ready": false,
-  "agenthub_readiness": {
-    "ready_for_future_registry_entry": true,
-    "manifest_fields_enhanced": true,
-    "integration_documentation_created": true,
-    "target_integration_project": "F:\\AIProjects\\AgentHubControlCenter"
-  },
+  "agenthub_readiness": "ready-local",
   "agenthub_modified": false,
   "validation_summary": {
-    "pytest": "passed: 16 tests",
+    "pytest": "passed: 20 tests",
     "compileall": "passed",
+    "release_check": "passed: 0 fails, 0 warnings",
     "app_import": "passed",
     "validated_on": "2026-07-01"
   },
@@ -29,7 +28,7 @@
     "pushed": false,
     "secrets_read": false
   },
-  "next_stage": "WCC-003-GITHUB-SHOWCASE-PREP",
+  "next_stage": "WCC-004-GITHUB-PUBLIC-RELEASE",
   "demo_data_only": true,
   "local_first": true,
   "unsafe_artifacts_expected": false,
@@ -43,10 +42,11 @@
     ".streamlit/secrets.toml"
   ],
   "notes": [
-    "WCC-002 is a local MVP plus AgentHub readiness checkpoint, not a GitHub public release.",
-    "The goal is to standardize this project's manifest for future AgentHubControlCenter recognition.",
+    "WCC-003 is GitHub showcase preparation, not a GitHub public release.",
+    "The goal is README showcase polish, screenshot planning, public checklist, release check, and safety validation.",
     "This stage does not modify F:\\AIProjects\\AgentHubControlCenter.",
     "No GitHub remote is configured and no push has been performed.",
-    "Profile pin is not applicable until a later public showcase stage."
+    "Profile pin is not applicable until a later public showcase stage.",
+    "Screenshots are planned in docs/SCREENSHOTS_GUIDE.md but not captured in WCC-003."
   ]
 }

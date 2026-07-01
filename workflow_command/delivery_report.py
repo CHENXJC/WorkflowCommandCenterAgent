@@ -40,20 +40,23 @@ def generate_delivery_report_markdown(payload: DeliveryReportInput | dict[str, A
 def build_demo_delivery_report() -> DeliveryReportInput:
     return DeliveryReportInput(
         project_name="WorkflowCommandCenterAgent",
-        checkpoint="WCC-002-AGENTHUB-READINESS",
-        stage_goal="Prepare WorkflowCommandCenterAgent for future AgentHubControlCenter recognition without modifying the hub repo.",
+        checkpoint="WCC-003-GITHUB-SHOWCASE-PREP",
+        stage_goal="Prepare WorkflowCommandCenterAgent for a future GitHub public showcase without publishing, pushing, profile pinning, or modifying AgentHubControlCenter.",
         completed_items=[
-            "Enhanced agent_manifest.json for AgentHub readiness.",
-            "Enhanced release/public_showcase_manifest.json with local release boundary.",
-            "Created AgentHub integration documentation.",
-            "Created WCC-002 readiness summary.",
-            "Updated README and PROJECT_STATUS.",
-            "Added AgentHub readiness tests.",
+            "Created screenshot guide.",
+            "Created public showcase checklist.",
+            "Created WCC-003 showcase prep summary.",
+            "Added public release prep check script.",
+            "Updated README and PROJECT_STATUS for showcase prep.",
+            "Updated release and agent manifests for WCC-003.",
         ],
         modified_files=[
             "app.py",
             "workflow_command/",
             "data/demo_projects.json",
+            "docs/SCREENSHOTS_GUIDE.md",
+            "docs/PUBLIC_SHOWCASE_CHECKLIST.md",
+            "docs/WCC_003_GITHUB_SHOWCASE_PREP.md",
             "docs/AGENTHUB_INTEGRATION.md",
             "docs/WCC_002_AGENTHUB_READINESS.md",
             "docs/PROJECT_PLAN.md",
@@ -61,19 +64,22 @@ def build_demo_delivery_report() -> DeliveryReportInput:
             "PROJECT_STATUS.md",
             "agent_manifest.json",
             "release/public_showcase_manifest.json",
+            "release/public_release_check.py",
+            "screenshots/.gitkeep",
         ],
         validation_results=[
             "python -m pytest -q",
             "python -m compileall .",
+            "python release/public_release_check.py",
             "python -c \"import app; print('APP_IMPORT_OK')\"",
             "JSON manifest parse checks",
         ],
         risks=[
-            "WCC-002 uses demo data only and does not modify AgentHubControlCenter.",
-            "GitHub release and profile pin are intentionally out of scope.",
+            "WCC-003 uses demo data only and does not modify AgentHubControlCenter.",
+            "GitHub public release, remote configuration, push, screenshots, and profile pin are intentionally out of scope.",
         ],
-        git_status_summary="Local-only repository; no remote push required for WCC-002.",
-        next_recommended_action="WCC-003 GitHub showcase prep after local readiness validation.",
+        git_status_summary="Local-only repository; no remote push required for WCC-003.",
+        next_recommended_action="WCC-004 GitHub public release only when explicitly requested.",
     )
 
 

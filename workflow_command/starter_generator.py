@@ -75,8 +75,8 @@ def build_default_wcc_starter() -> ProjectStarterRequest:
     return ProjectStarterRequest(
         project_name="WorkflowCommandCenterAgent",
         project_path=r"F:\AIProjects\WorkflowCommandCenterAgent",
-        checkpoint="WCC-002-AGENTHUB-READINESS",
-        stage_goal="Prepare the local MVP for future AgentHubControlCenter recognition by enhancing manifest fields, integration docs, status docs, and readiness tests without modifying AgentHubControlCenter.",
+        checkpoint="WCC-003-GITHUB-SHOWCASE-PREP",
+        stage_goal="Prepare GitHub public showcase assets by strengthening README, screenshot planning, public showcase checklist, release manifest, release check script, and tests without publishing or pushing.",
         project_type="Local-first Streamlit AI workflow command center",
         files_to_read=[
             "README.md",
@@ -84,6 +84,9 @@ def build_default_wcc_starter() -> ProjectStarterRequest:
             "docs/PROJECT_PLAN.md",
             "docs/AGENTHUB_INTEGRATION.md",
             "docs/WCC_002_AGENTHUB_READINESS.md",
+            "docs/SCREENSHOTS_GUIDE.md",
+            "docs/PUBLIC_SHOWCASE_CHECKLIST.md",
+            "docs/WCC_003_GITHUB_SHOWCASE_PREP.md",
             "agent_manifest.json",
         ],
         allowed_actions=[
@@ -94,27 +97,29 @@ def build_default_wcc_starter() -> ProjectStarterRequest:
         ],
         blocked_actions=[
             "Do not read .env, credentials, tokens, browser cookies, or private files.",
-            "Do not modify F:\\AIProjects\\AgentHubControlCenter during WCC-002.",
+            "Do not modify F:\\AIProjects\\AgentHubControlCenter during WCC-003.",
             "Do not connect GitHub remote, push, or force push.",
+            "Do not claim screenshots or GitHub public release are complete.",
             "Do not use git add .",
         ],
         test_commands=[
             "python -m pytest -q",
             "python -m compileall .",
+            "python release/public_release_check.py",
         ],
         git_policy=[
             "Run git status before staging.",
             "Stage explicit WCC project files only.",
-            "Commit message: chore: prepare WorkflowCommandCenterAgent for AgentHub readiness",
+            "Commit message: chore: prepare WorkflowCommandCenterAgent GitHub showcase assets",
             "Do not push.",
         ],
         output_requirements=[
-            "Confirm whether WCC-002 is complete.",
-            "List manifest, docs, and test updates.",
+            "Confirm whether WCC-003 is complete.",
+            "List showcase docs, release check, manifest, README, and test updates.",
             "Show Streamlit launch command.",
-            "Report pytest and compileall results.",
+            "Report pytest, compileall, release check, and app import results.",
             "Report git commit and push status.",
-            "Mark checkpoint as WCC-002-AGENTHUB-READINESS-COMPLETE when complete.",
+            "Mark checkpoint as WCC-003-GITHUB-SHOWCASE-PREP-COMPLETE when complete.",
         ],
     )
 

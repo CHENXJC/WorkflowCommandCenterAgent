@@ -28,16 +28,16 @@ def test_agent_manifest_contains_agenthub_fields():
     manifest = json.loads((ROOT / "agent_manifest.json").read_text(encoding="utf-8"))
 
     assert manifest["agent_name"] == "WorkflowCommandCenterAgent"
-    assert manifest["current_checkpoint"] == "WCC-002-AGENTHUB-READINESS"
+    assert manifest["current_checkpoint"] == "WCC-003-GITHUB-SHOWCASE-PREP"
     assert manifest["hub_ready"] is True
     assert manifest["modifies_agent_hub"] is False
-    assert manifest["github_showcase_ready"] is False
+    assert manifest["github_showcase_ready"] == "prep"
 
 
 def test_public_showcase_manifest_is_not_public_release_completed():
     manifest = json.loads((ROOT / "release" / "public_showcase_manifest.json").read_text(encoding="utf-8"))
 
     assert manifest["project_name"] == "WorkflowCommandCenterAgent"
-    assert manifest["release_stage"] == "local-mvp-agenthub-readiness"
+    assert manifest["release_stage"] == "github-showcase-prep"
     assert manifest["github_public_release_completed"] is False
-    assert manifest["github_showcase_ready"] is False
+    assert manifest["github_showcase_ready"] == "prep"

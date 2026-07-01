@@ -40,7 +40,7 @@ from workflow_command.workflow_packs import (
 )
 
 
-CHECKPOINT = "WCC-002-AGENTHUB-READINESS"
+CHECKPOINT = "WCC-003-GITHUB-SHOWCASE-PREP"
 
 
 def main() -> None:
@@ -55,7 +55,7 @@ def main() -> None:
     st.sidebar.caption("Local-first AI project execution command center")
     st.sidebar.metric("Checkpoint", CHECKPOINT)
     st.sidebar.success("AgentHub-ready manifest: true")
-    st.sidebar.info("WCC-002 prepares readiness only; it does not modify AgentHubControlCenter.")
+    st.sidebar.info("WCC-003 prepares GitHub showcase assets only; it does not publish or push.")
 
     tabs = st.tabs(
         [
@@ -105,11 +105,11 @@ def render_command_center() -> None:
     col3.metric("Prompt Categories", len(list_prompt_categories(prompts)))
     col4.metric("Hub Ready", "Yes")
 
-    st.subheader("WCC-002 Scope")
+    st.subheader("WCC-003 Scope")
     st.write(
         "This local MVP generates Codex-ready project instructions, reusable workflow packs, "
         "execution checklists, demo project status views, prompt/rule records, and delivery reports. "
-        "WCC-002 adds AgentHub-ready manifest and documentation fields for future recognition."
+        "WCC-003 adds public showcase prep docs, screenshot planning, and release safety checks."
     )
 
     st.subheader("Portfolio Control Boundary")
@@ -120,6 +120,7 @@ def render_command_center() -> None:
 - Local-first and demo-data-only
 - Designed for AI Agent / AI Skill portfolio execution
 - AgentHub-ready manifest enhanced
+- Showcase prep checklist included
 - Markdown, text, and JSON exports available
 """
         )
@@ -130,6 +131,7 @@ def render_command_center() -> None:
 - Does not read `.env`, tokens, browser cookies, or private files
 - Not a GitHub release checkpoint
 - Not a profile pin checkpoint
+- Screenshots are planned, not captured
 """
         )
 
@@ -327,11 +329,12 @@ around concrete AI Agent delivery checkpoints.
     st.subheader("Current Boundary")
     st.markdown(
         """
-- Current checkpoint: `WCC-002-AGENTHUB-READINESS`
+- Current checkpoint: `WCC-003-GITHUB-SHOWCASE-PREP`
 - Uses demo data only
 - AgentHub-ready manifest has been enhanced
 - Does not modify `F:\\AIProjects\\AgentHubControlCenter`
 - GitHub public release is a later checkpoint
+- Screenshot guide exists, but actual screenshots are not completed
 """
     )
     st.subheader("Agent Manifest Preview")

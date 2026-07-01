@@ -12,9 +12,9 @@ Recommended AgentHub display:
 - Chinese name: AI 工作流指令中台
 - Category: workflow-orchestration
 - Subcategory: project-execution-command-center
-- Status: agenthub-ready-local
-- Current checkpoint: WCC-002-AGENTHUB-READINESS
-- Next action: WCC-003-GITHUB-SHOWCASE-PREP
+- Status: github-showcase-prep
+- Current checkpoint: WCC-003-GITHUB-SHOWCASE-PREP
+- Next action: WCC-004-GITHUB-PUBLIC-RELEASE
 
 ## Difference From AgentHubControlCenter
 
@@ -26,22 +26,23 @@ AgentHubControlCenter should eventually answer "what agents exist, what status a
 
 WorkflowCommandCenterAgent should answer "what exact instruction, workflow pack, checklist, or delivery report should I use to execute the next project step?"
 
-These projects are complementary, but they should remain separate at WCC-002:
+These projects are complementary, but they should remain separate at WCC-003:
 
 - AgentHubControlCenter is the portfolio-level control center.
 - WorkflowCommandCenterAgent is the execution-template and project-command layer.
-- WCC-002 prepares metadata for future visibility without changing the hub.
+- WCC-003 prepares GitHub showcase assets without changing the hub.
 
-## Why WCC-002 Does Not Modify AgentHubControlCenter
+## Why This Stage Does Not Modify AgentHubControlCenter
 
-WCC-002 is an AgentHub-readiness checkpoint, not an integration checkpoint.
+WCC-003 is a GitHub showcase prep checkpoint, not an AgentHub integration checkpoint.
 
 The safe sequence is:
 
 1. Stabilize WorkflowCommandCenterAgent's local metadata contract.
 2. Document the future integration contract.
-3. Validate the manifest and release status locally.
-4. Only later decide whether AgentHubControlCenter should read this project.
+3. Prepare public showcase assets safely.
+4. Validate the manifest and release status locally.
+5. Only later decide whether AgentHubControlCenter should read this project.
 
 This avoids mixing a new project's readiness work with changes to the existing hub repo.
 
@@ -98,7 +99,7 @@ Fields AgentHubControlCenter can use later:
 
 ## Future AgentHubControlCenter Files To Consider
 
-Do not modify these files during WCC-002. They are listed only for a future explicit integration task.
+Do not modify these files during WCC-003. They are listed only for a future explicit integration task.
 
 Likely future files:
 
@@ -110,9 +111,9 @@ Likely future files:
 - `F:\AIProjects\AgentHubControlCenter\PROJECT_STATUS.md`
 - `F:\AIProjects\AgentHubControlCenter\README.md`
 
-## WCC-002 Boundary
+## WCC-003 Boundary
 
-WCC-002 completed only internal readiness work inside `F:\AIProjects\WorkflowCommandCenterAgent`.
+WCC-003 completed only internal GitHub showcase prep work inside `F:\AIProjects\WorkflowCommandCenterAgent`.
 
 It did not:
 

@@ -90,16 +90,29 @@ Final checkpoint:
 
 ### WCC-003-GITHUB-SHOWCASE-PREP
 
-Potential scope:
+Completed scope:
 
 - Add `docs/SCREENSHOTS_GUIDE.md`
-- Add `docs/PUBLIC_SHOWCASE_MANIFEST.md`
+- Add `docs/PUBLIC_SHOWCASE_CHECKLIST.md`
+- Add `docs/WCC_003_GITHUB_SHOWCASE_PREP.md`
 - Polish README screenshots and feature sections
 - Add public safety checklist
-- Add release audit script if useful
+- Add release audit script
 - Confirm no generated private outputs are tracked
 
-### WCC-004-GITHUB-PUBLIC
+Boundary:
+
+- Did not configure GitHub remote.
+- Did not push.
+- Did not mark public release as complete.
+- Did not create fake screenshots.
+- Did not modify `F:\AIProjects\AgentHubControlCenter`.
+
+Final checkpoint:
+
+`WCC-003-GITHUB-SHOWCASE-PREP-COMPLETE`
+
+### WCC-004-GITHUB-PUBLIC-RELEASE
 
 Potential scope:
 
@@ -155,9 +168,9 @@ python -m json.tool release/public_showcase_manifest.json
 - No credentials or tokens
 - No browser cookies
 - No private project file scanning
-- No remote GitHub push in WCC-001 or WCC-002
-- No AgentHubControlCenter modification in WCC-001 or WCC-002
+- No remote GitHub push in WCC-001, WCC-002, or WCC-003
+- No AgentHubControlCenter modification in WCC-001, WCC-002, or WCC-003
 
-## WCC-002 AgentHub Boundary
+## WCC-003 Showcase Boundary
 
-WCC-002 prepares AgentHub-ready fields and documentation inside this project. It does not edit, import from, or write to `F:\AIProjects\AgentHubControlCenter`.
+WCC-003 prepares GitHub showcase assets inside this project. It does not edit, import from, or write to `F:\AIProjects\AgentHubControlCenter`, does not configure a GitHub remote, does not push, and does not mark public release as complete.
