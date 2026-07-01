@@ -5,16 +5,16 @@
   "category": "workflow-orchestration",
   "subcategory": "project-execution-command-center",
   "role_in_portfolio": "AI project execution command center",
-  "current_checkpoint": "WCC-003-GITHUB-SHOWCASE-PREP",
-  "status": "github-showcase-prep",
-  "lifecycle_stage": "local-mvp-agenthub-ready-showcase-prep",
+  "current_checkpoint": "WCC-004-GITHUB-PUBLIC-RELEASE",
+  "status": "github-public-showcase",
+  "lifecycle_stage": "public-showcase",
   "hub_ready": true,
   "modifies_agent_hub": false,
   "launch_command": "streamlit run app.py",
   "local_path": "F:\\AIProjects\\WorkflowCommandCenterAgent",
-  "github_repo": "not_configured",
-  "github_showcase_ready": "prep",
-  "profile_pin_status": "not_applicable_yet",
+  "github_repo": "https://github.com/CHENXJC/WorkflowCommandCenterAgent",
+  "github_showcase_ready": true,
+  "profile_pin_status": "not_pinned",
   "demo_mode": true,
   "privacy_mode": "local-first-demo-data-only",
   "core_capabilities": [
@@ -55,18 +55,20 @@
     "python -c \"import app; print('APP_IMPORT_OK')\""
   ],
   "last_validation": {
-    "checkpoint": "WCC-003-GITHUB-SHOWCASE-PREP",
-    "pytest": "passed: 20 tests",
+    "checkpoint": "WCC-004-GITHUB-PUBLIC-RELEASE",
+    "pytest": "passed: 24 tests",
     "compileall": "passed",
     "release_check": "passed: 0 fails, 0 warnings",
     "app_import": "passed",
+    "github_readme_verification": "pending",
+    "screenshot_raw_url_verification": "pending",
     "validated_on": "2026-07-01"
   },
   "integration_notes": [
     "AgentHubControlCenter can read this manifest in a future integration checkpoint.",
-    "WCC-003 prepares GitHub showcase assets inside this project and does not modify AgentHubControlCenter.",
-    "GitHub repository is not configured and public showcase release is not complete.",
-    "Screenshots are planned but not captured in WCC-003."
+    "WCC-004 publishes the GitHub public showcase and does not modify AgentHubControlCenter.",
+    "GitHub repository is public at https://github.com/CHENXJC/WorkflowCommandCenterAgent.",
+    "Profile pin remains not completed."
   ],
-  "next_recommended_action": "WCC-004-GITHUB-PUBLIC-RELEASE"
+  "next_recommended_action": "optional-profile-pin-or-agenthub-integration"
 }

@@ -75,8 +75,8 @@ def build_default_wcc_starter() -> ProjectStarterRequest:
     return ProjectStarterRequest(
         project_name="WorkflowCommandCenterAgent",
         project_path=r"F:\AIProjects\WorkflowCommandCenterAgent",
-        checkpoint="WCC-003-GITHUB-SHOWCASE-PREP",
-        stage_goal="Prepare GitHub public showcase assets by strengthening README, screenshot planning, public showcase checklist, release manifest, release check script, and tests without publishing or pushing.",
+        checkpoint="WCC-004-GITHUB-PUBLIC-RELEASE",
+        stage_goal="Publish the demo-safe GitHub public showcase with real screenshots, README image references, manifest updates, final validation, remote push, and online README/screenshot verification.",
         project_type="Local-first Streamlit AI workflow command center",
         files_to_read=[
             "README.md",
@@ -87,6 +87,7 @@ def build_default_wcc_starter() -> ProjectStarterRequest:
             "docs/SCREENSHOTS_GUIDE.md",
             "docs/PUBLIC_SHOWCASE_CHECKLIST.md",
             "docs/WCC_003_GITHUB_SHOWCASE_PREP.md",
+            "docs/WCC_004_GITHUB_PUBLIC_RELEASE.md",
             "agent_manifest.json",
         ],
         allowed_actions=[
@@ -97,9 +98,9 @@ def build_default_wcc_starter() -> ProjectStarterRequest:
         ],
         blocked_actions=[
             "Do not read .env, credentials, tokens, browser cookies, or private files.",
-            "Do not modify F:\\AIProjects\\AgentHubControlCenter during WCC-003.",
-            "Do not connect GitHub remote, push, or force push.",
-            "Do not claim screenshots or GitHub public release are complete.",
+            "Do not modify F:\\AIProjects\\AgentHubControlCenter during WCC-004.",
+            "Do not force push.",
+            "Do not profile pin or claim profile pin is complete.",
             "Do not use git add .",
         ],
         test_commands=[
@@ -110,16 +111,16 @@ def build_default_wcc_starter() -> ProjectStarterRequest:
         git_policy=[
             "Run git status before staging.",
             "Stage explicit WCC project files only.",
-            "Commit message: chore: prepare WorkflowCommandCenterAgent GitHub showcase assets",
-            "Do not push.",
+            "Commit message: chore: publish WorkflowCommandCenterAgent GitHub showcase",
+            "Push only to origin main after local validation passes.",
         ],
         output_requirements=[
-            "Confirm whether WCC-003 is complete.",
-            "List showcase docs, release check, manifest, README, and test updates.",
+            "Confirm whether WCC-004 is complete.",
+            "List screenshots, README, manifest, release check, GitHub verification, and test updates.",
             "Show Streamlit launch command.",
             "Report pytest, compileall, release check, and app import results.",
             "Report git commit and push status.",
-            "Mark checkpoint as WCC-003-GITHUB-SHOWCASE-PREP-COMPLETE when complete.",
+            "Mark checkpoint as WCC-004-GITHUB-PUBLIC-RELEASE-COMPLETE when complete.",
         ],
     )
 

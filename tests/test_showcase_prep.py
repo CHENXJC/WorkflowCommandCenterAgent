@@ -27,32 +27,33 @@ def test_readme_contains_showcase_agenthub_and_local_first_sections():
     assert "WorkflowCommandCenterAgent vs AgentHubControlCenter" in readme
     assert "AgentHub-Ready, Not AgentHub-Integrated" in readme
     assert "Local-First And Demo-Data-Only Safety Model" in readme
-    assert "GitHub public release: not completed" in readme
-    assert "Actual screenshots: not completed" in readme
+    assert "GitHub public release: completed" in readme
+    assert "Screenshot Showcase" in readme
 
 
 def test_release_manifest_showcase_prep_fields():
     manifest = json.loads((ROOT / "release" / "public_showcase_manifest.json").read_text(encoding="utf-8"))
 
-    assert manifest["current_checkpoint"] == "WCC-003-GITHUB-SHOWCASE-PREP"
-    assert manifest["release_stage"] == "github-showcase-prep"
-    assert manifest["github_public_release_completed"] is False
-    assert manifest["github_repo"] == "not_configured"
-    assert manifest["screenshots_ready"] is False
+    assert manifest["current_checkpoint"] == "WCC-004-GITHUB-PUBLIC-RELEASE"
+    assert manifest["release_stage"] == "github-public-release"
+    assert manifest["github_public_release_completed"] is True
+    assert manifest["github_repo"] == "https://github.com/CHENXJC/WorkflowCommandCenterAgent"
+    assert manifest["screenshots_ready"] is True
+    assert manifest["screenshot_count"] == 8
     assert manifest["screenshot_guide_ready"] is True
     assert manifest["public_showcase_checklist_ready"] is True
-    assert manifest["profile_pin_status"] == "not_applicable_yet"
+    assert manifest["profile_pin_status"] == "not_pinned"
     assert manifest["agenthub_modified"] is False
     assert manifest["agenthub_readiness"] == "ready-local"
-    assert manifest["next_stage"] == "WCC-004-GITHUB-PUBLIC-RELEASE"
+    assert manifest["next_stage"] == "optional-profile-pin-or-agenthub-integration"
 
 
 def test_agent_manifest_showcase_prep_fields():
     manifest = json.loads((ROOT / "agent_manifest.json").read_text(encoding="utf-8"))
 
-    assert manifest["current_checkpoint"] == "WCC-003-GITHUB-SHOWCASE-PREP"
+    assert manifest["current_checkpoint"] == "WCC-004-GITHUB-PUBLIC-RELEASE"
     assert manifest["hub_ready"] is True
     assert manifest["modifies_agent_hub"] is False
-    assert manifest["github_showcase_ready"] == "prep"
-    assert manifest["github_repo"] == "not_configured"
-    assert manifest["next_recommended_action"] == "WCC-004-GITHUB-PUBLIC-RELEASE"
+    assert manifest["github_showcase_ready"] is True
+    assert manifest["github_repo"] == "https://github.com/CHENXJC/WorkflowCommandCenterAgent"
+    assert manifest["next_recommended_action"] == "optional-profile-pin-or-agenthub-integration"

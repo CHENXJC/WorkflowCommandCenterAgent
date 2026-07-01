@@ -40,7 +40,7 @@ from workflow_command.workflow_packs import (
 )
 
 
-CHECKPOINT = "WCC-003-GITHUB-SHOWCASE-PREP"
+CHECKPOINT = "WCC-004-GITHUB-PUBLIC-RELEASE"
 
 
 def main() -> None:
@@ -55,7 +55,7 @@ def main() -> None:
     st.sidebar.caption("Local-first AI project execution command center")
     st.sidebar.metric("Checkpoint", CHECKPOINT)
     st.sidebar.success("AgentHub-ready manifest: true")
-    st.sidebar.info("WCC-003 prepares GitHub showcase assets only; it does not publish or push.")
+    st.sidebar.info("WCC-004 publishes the GitHub public showcase without profile pinning.")
 
     tabs = st.tabs(
         [
@@ -105,11 +105,11 @@ def render_command_center() -> None:
     col3.metric("Prompt Categories", len(list_prompt_categories(prompts)))
     col4.metric("Hub Ready", "Yes")
 
-    st.subheader("WCC-003 Scope")
+    st.subheader("WCC-004 Scope")
     st.write(
         "This local MVP generates Codex-ready project instructions, reusable workflow packs, "
         "execution checklists, demo project status views, prompt/rule records, and delivery reports. "
-        "WCC-003 adds public showcase prep docs, screenshot planning, and release safety checks."
+        "WCC-004 publishes the demo-safe GitHub showcase with real screenshots and online verification."
     )
 
     st.subheader("Portfolio Control Boundary")
@@ -120,7 +120,7 @@ def render_command_center() -> None:
 - Local-first and demo-data-only
 - Designed for AI Agent / AI Skill portfolio execution
 - AgentHub-ready manifest enhanced
-- Showcase prep checklist included
+- GitHub public showcase release completed
 - Markdown, text, and JSON exports available
 """
         )
@@ -129,9 +129,9 @@ def render_command_center() -> None:
             """
 - Does not modify `F:\\AIProjects\\AgentHubControlCenter`
 - Does not read `.env`, tokens, browser cookies, or private files
-- Not a GitHub release checkpoint
-- Not a profile pin checkpoint
-- Screenshots are planned, not captured
+- Profile pin is not completed
+- Uses demo data only
+- Screenshots are captured for public README
 """
         )
 
@@ -329,12 +329,12 @@ around concrete AI Agent delivery checkpoints.
     st.subheader("Current Boundary")
     st.markdown(
         """
-- Current checkpoint: `WCC-003-GITHUB-SHOWCASE-PREP`
+- Current checkpoint: `WCC-004-GITHUB-PUBLIC-RELEASE`
 - Uses demo data only
 - AgentHub-ready manifest has been enhanced
 - Does not modify `F:\\AIProjects\\AgentHubControlCenter`
-- GitHub public release is a later checkpoint
-- Screenshot guide exists, but actual screenshots are not completed
+- GitHub public showcase is complete
+- Profile pin remains not completed
 """
     )
     st.subheader("Agent Manifest Preview")

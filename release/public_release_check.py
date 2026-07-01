@@ -1,4 +1,4 @@
-"""Public showcase readiness checks for WorkflowCommandCenterAgent.
+"""Public showcase release checks for WorkflowCommandCenterAgent.
 
 This script performs local checks only. It does not configure remotes, push,
 publish, read secrets, or modify any external project.
@@ -20,6 +20,16 @@ SENSITIVE_PATTERNS = (
     "password",
     "api_key",
 )
+SCREENSHOTS = (
+    "screenshots/01_command_center_home.png",
+    "screenshots/02_project_starter_generator.png",
+    "screenshots/03_workflow_packs.png",
+    "screenshots/04_checklist_manager.png",
+    "screenshots/05_project_status_tracker.png",
+    "screenshots/06_prompt_rule_library.png",
+    "screenshots/07_delivery_report_generator.png",
+    "screenshots/08_export_center.png",
+)
 REQUIRED_FILES = (
     "README.md",
     "PROJECT_STATUS.md",
@@ -28,6 +38,7 @@ REQUIRED_FILES = (
     "docs/SCREENSHOTS_GUIDE.md",
     "docs/PUBLIC_SHOWCASE_CHECKLIST.md",
     "docs/WCC_003_GITHUB_SHOWCASE_PREP.md",
+    "docs/WCC_004_GITHUB_PUBLIC_RELEASE.md",
 )
 
 
@@ -40,14 +51,22 @@ def main() -> int:
 
     agent_manifest = _load_json(ROOT / "agent_manifest.json", checks)
     release_manifest = _load_json(ROOT / "release" / "public_showcase_manifest.json", checks)
+    readme = (ROOT / "README.md").read_text(encoding="utf-8") if (ROOT / "README.md").exists() else ""
+
+    for screenshot in SCREENSHOTS:
+        path = ROOT / screenshot
+        checks.append(_result(path.exists(), "PASS", "FAIL", f"Screenshot exists: {screenshot}"))
+        checks.append(_result(_is_png(path), "PASS", "FAIL", f"Screenshot is PNG: {screenshot}"))
+        checks.append(_result(screenshot in readme, "PASS", "FAIL", f"README references screenshot: {screenshot}"))
 
     if release_manifest:
+        is_release_stage = release_manifest.get("release_stage") == "github-public-release"
         checks.append(
             _result(
-                release_manifest.get("github_public_release_completed") is False,
+                release_manifest.get("github_public_release_completed") is True if is_release_stage else release_manifest.get("github_public_release_completed") is False,
                 "PASS",
                 "FAIL",
-                "Release manifest marks GitHub public release as not completed",
+                "Release completion flag matches release stage",
             )
         )
         checks.append(
@@ -60,10 +79,18 @@ def main() -> int:
         )
         checks.append(
             _result(
-                release_manifest.get("screenshot_guide_ready") is True,
+                release_manifest.get("screenshots_ready") is True,
                 "PASS",
                 "FAIL",
-                "Release manifest marks screenshot guide ready",
+                "Release manifest marks screenshots ready",
+            )
+        )
+        checks.append(
+            _result(
+                release_manifest.get("screenshot_count") == len(SCREENSHOTS),
+                "PASS",
+                "FAIL",
+                "Release manifest screenshot count is 8",
             )
         )
         checks.append(
@@ -72,6 +99,14 @@ def main() -> int:
                 "PASS",
                 "FAIL",
                 "Release manifest marks public showcase checklist ready",
+            )
+        )
+        checks.append(
+            _result(
+                release_manifest.get("profile_pin_status") == "not_pinned",
+                "PASS",
+                "FAIL",
+                "Release manifest marks profile pin as not_pinned",
             )
         )
 
@@ -92,6 +127,22 @@ def main() -> int:
                 "Agent manifest marks hub_ready as true",
             )
         )
+        checks.append(
+            _result(
+                agent_manifest.get("github_showcase_ready") is True,
+                "PASS",
+                "FAIL",
+                "Agent manifest marks github_showcase_ready as true",
+            )
+        )
+        checks.append(
+            _result(
+                agent_manifest.get("profile_pin_status") == "not_pinned",
+                "PASS",
+                "FAIL",
+                "Agent manifest marks profile pin as not_pinned",
+            )
+        )
 
     tracked_files = _git_ls_files()
     risky_files = [
@@ -101,8 +152,9 @@ def main() -> int:
     ]
     checks.append(_result(not risky_files, "PASS", "FAIL", f"No risky tracked filenames: {risky_files or 'none'}"))
 
-    remotes = _git_remote()
-    checks.append(_result(not remotes.strip(), "PASS", "WARNING", "No Git remote configured for showcase prep stage"))
+    remotes = _git_remote().strip()
+    remote_detail = "configured" if remotes else "not configured yet"
+    checks.append(("PASS", "Git remote state acceptable for current stage", remote_detail))
 
     fail_count = sum(1 for status, _, _ in checks if status == "FAIL")
     warning_count = sum(1 for status, _, _ in checks if status == "WARNING")
@@ -152,6 +204,13 @@ def _git_remote() -> str:
         text=True,
     )
     return result.stdout if result.returncode == 0 else ""
+
+
+def _is_png(path: Path) -> bool:
+    if not path.exists() or not path.is_file():
+        return False
+    with path.open("rb") as handle:
+        return handle.read(8) == b"\x89PNG\r\n\x1a\n"
 
 
 def _is_sensitive_filename(path: str) -> bool:

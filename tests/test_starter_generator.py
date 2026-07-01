@@ -9,7 +9,7 @@ def test_project_starter_prompt_contains_required_fields():
 
     assert "WorkflowCommandCenterAgent" in prompt
     assert r"F:\AIProjects\WorkflowCommandCenterAgent" in prompt
-    assert "WCC-003-GITHUB-SHOWCASE-PREP" in prompt
+    assert "WCC-004-GITHUB-PUBLIC-RELEASE" in prompt
     assert "Files To Read First" in prompt
     assert "Allowed Actions" in prompt
     assert "Blocked Actions" in prompt

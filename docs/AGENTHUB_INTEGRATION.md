@@ -12,9 +12,9 @@ Recommended AgentHub display:
 - Chinese name: AI 工作流指令中台
 - Category: workflow-orchestration
 - Subcategory: project-execution-command-center
-- Status: github-showcase-prep
-- Current checkpoint: WCC-003-GITHUB-SHOWCASE-PREP
-- Next action: WCC-004-GITHUB-PUBLIC-RELEASE
+- Status: github-public-showcase
+- Current checkpoint: WCC-004-GITHUB-PUBLIC-RELEASE
+- Next action: optional-profile-pin-or-agenthub-integration
 
 ## Difference From AgentHubControlCenter
 
@@ -26,15 +26,15 @@ AgentHubControlCenter should eventually answer "what agents exist, what status a
 
 WorkflowCommandCenterAgent should answer "what exact instruction, workflow pack, checklist, or delivery report should I use to execute the next project step?"
 
-These projects are complementary, but they should remain separate at WCC-003:
+These projects are complementary, but they should remain separate at WCC-004:
 
 - AgentHubControlCenter is the portfolio-level control center.
 - WorkflowCommandCenterAgent is the execution-template and project-command layer.
-- WCC-003 prepares GitHub showcase assets without changing the hub.
+- WCC-004 publishes the GitHub public showcase without changing the hub.
 
 ## Why This Stage Does Not Modify AgentHubControlCenter
 
-WCC-003 is a GitHub showcase prep checkpoint, not an AgentHub integration checkpoint.
+WCC-004 is a GitHub public release checkpoint, not an AgentHub integration checkpoint.
 
 The safe sequence is:
 
@@ -99,7 +99,7 @@ Fields AgentHubControlCenter can use later:
 
 ## Future AgentHubControlCenter Files To Consider
 
-Do not modify these files during WCC-003. They are listed only for a future explicit integration task.
+Do not modify these files during WCC-004. They are listed only for a future explicit integration task.
 
 Likely future files:
 
@@ -111,9 +111,9 @@ Likely future files:
 - `F:\AIProjects\AgentHubControlCenter\PROJECT_STATUS.md`
 - `F:\AIProjects\AgentHubControlCenter\README.md`
 
-## WCC-003 Boundary
+## WCC-004 Boundary
 
-WCC-003 completed only internal GitHub showcase prep work inside `F:\AIProjects\WorkflowCommandCenterAgent`.
+WCC-004 publishes `F:\AIProjects\WorkflowCommandCenterAgent` to GitHub without modifying `F:\AIProjects\AgentHubControlCenter`.
 
 It did not:
 

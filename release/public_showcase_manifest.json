@@ -1,23 +1,26 @@
 {
   "project_name": "WorkflowCommandCenterAgent",
-  "current_checkpoint": "WCC-003-GITHUB-SHOWCASE-PREP",
-  "release_stage": "github-showcase-prep",
-  "github_public_release_completed": false,
-  "public_release_completed": false,
-  "github_repo": "not_configured",
-  "github_showcase_ready": "prep",
-  "screenshots_ready": false,
+  "current_checkpoint": "WCC-004-GITHUB-PUBLIC-RELEASE",
+  "release_stage": "github-public-release",
+  "github_public_release_completed": true,
+  "public_release_completed": true,
+  "github_repo": "https://github.com/CHENXJC/WorkflowCommandCenterAgent",
+  "github_showcase_ready": true,
+  "screenshots_ready": true,
+  "screenshot_count": 8,
   "screenshot_guide_ready": true,
   "public_showcase_checklist_ready": true,
-  "profile_pin_status": "not_applicable_yet",
+  "profile_pin_status": "not_pinned",
   "profile_pin_ready": false,
   "agenthub_readiness": "ready-local",
   "agenthub_modified": false,
   "validation_summary": {
-    "pytest": "passed: 20 tests",
+    "pytest": "passed: 24 tests",
     "compileall": "passed",
     "release_check": "passed: 0 fails, 0 warnings",
     "app_import": "passed",
+    "github_readme_verification": "pending",
+    "screenshot_raw_url_verification": "pending",
     "validated_on": "2026-07-01"
   },
   "safety_summary": {
@@ -28,7 +31,7 @@
     "pushed": false,
     "secrets_read": false
   },
-  "next_stage": "WCC-004-GITHUB-PUBLIC-RELEASE",
+  "next_stage": "optional-profile-pin-or-agenthub-integration",
   "demo_data_only": true,
   "local_first": true,
   "unsafe_artifacts_expected": false,
@@ -42,11 +45,10 @@
     ".streamlit/secrets.toml"
   ],
   "notes": [
-    "WCC-003 is GitHub showcase preparation, not a GitHub public release.",
-    "The goal is README showcase polish, screenshot planning, public checklist, release check, and safety validation.",
+    "WCC-004 is the GitHub public showcase release.",
+    "The goal is public README verification, screenshot raw URL verification, and demo-safe remote publication.",
     "This stage does not modify F:\\AIProjects\\AgentHubControlCenter.",
-    "No GitHub remote is configured and no push has been performed.",
-    "Profile pin is not applicable until a later public showcase stage.",
-    "Screenshots are planned in docs/SCREENSHOTS_GUIDE.md but not captured in WCC-003."
+    "Profile pin is not completed in WCC-004.",
+    "Screenshots are real Streamlit screenshots stored in screenshots/."
   ]
 }

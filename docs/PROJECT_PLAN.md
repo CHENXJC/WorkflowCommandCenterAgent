@@ -114,13 +114,24 @@ Final checkpoint:
 
 ### WCC-004-GITHUB-PUBLIC-RELEASE
 
-Potential scope:
+Completed scope:
 
 - Create or connect GitHub repository only when explicitly requested
 - Publish demo-safe files
 - Set GitHub About and topics
 - Verify remote tree safety
-- Decide whether profile pin is appropriate
+- Verify README page and screenshot raw URLs
+- Keep profile pin as not completed
+
+Boundary:
+
+- Did not modify `F:\AIProjects\AgentHubControlCenter`.
+- Did not profile pin.
+- Did not force push.
+
+Final checkpoint:
+
+`WCC-004-GITHUB-PUBLIC-RELEASE-COMPLETE`
 
 ## Data Flow
 
@@ -169,7 +180,8 @@ python -m json.tool release/public_showcase_manifest.json
 - No browser cookies
 - No private project file scanning
 - No remote GitHub push in WCC-001, WCC-002, or WCC-003
-- No AgentHubControlCenter modification in WCC-001, WCC-002, or WCC-003
+- WCC-004 allows normal push to the target public GitHub repo only
+- No AgentHubControlCenter modification in WCC-001, WCC-002, WCC-003, or WCC-004
 
 ## WCC-003 Showcase Boundary
 

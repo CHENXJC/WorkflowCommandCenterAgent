@@ -39,28 +39,28 @@ def test_agent_manifest_has_agenthub_ready_contract():
     assert required_fields.issubset(manifest)
     assert manifest["agent_name"] == "WorkflowCommandCenterAgent"
     assert manifest["subcategory"] == "project-execution-command-center"
-    assert manifest["current_checkpoint"] == "WCC-003-GITHUB-SHOWCASE-PREP"
-    assert manifest["status"] == "github-showcase-prep"
+    assert manifest["current_checkpoint"] == "WCC-004-GITHUB-PUBLIC-RELEASE"
+    assert manifest["status"] == "github-public-showcase"
     assert manifest["hub_ready"] is True
     assert manifest["modifies_agent_hub"] is False
-    assert manifest["github_repo"] == "not_configured"
-    assert manifest["profile_pin_status"] == "not_applicable_yet"
-    assert manifest["next_recommended_action"] == "WCC-004-GITHUB-PUBLIC-RELEASE"
+    assert manifest["github_repo"] == "https://github.com/CHENXJC/WorkflowCommandCenterAgent"
+    assert manifest["profile_pin_status"] == "not_pinned"
+    assert manifest["next_recommended_action"] == "optional-profile-pin-or-agenthub-integration"
 
 
 def test_release_manifest_states_not_public_release_or_agenthub_modified():
     manifest = json.loads((ROOT / "release" / "public_showcase_manifest.json").read_text(encoding="utf-8"))
 
     assert manifest["project_name"] == "WorkflowCommandCenterAgent"
-    assert manifest["current_checkpoint"] == "WCC-003-GITHUB-SHOWCASE-PREP"
-    assert manifest["release_stage"] == "github-showcase-prep"
-    assert manifest["github_public_release_completed"] is False
-    assert manifest["github_repo"] == "not_configured"
-    assert manifest["profile_pin_status"] == "not_applicable_yet"
+    assert manifest["current_checkpoint"] == "WCC-004-GITHUB-PUBLIC-RELEASE"
+    assert manifest["release_stage"] == "github-public-release"
+    assert manifest["github_public_release_completed"] is True
+    assert manifest["github_repo"] == "https://github.com/CHENXJC/WorkflowCommandCenterAgent"
+    assert manifest["profile_pin_status"] == "not_pinned"
     assert manifest["agenthub_modified"] is False
-    assert manifest["safety_summary"]["remote_configured"] is False
-    assert manifest["safety_summary"]["pushed"] is False
-    assert manifest["next_stage"] == "WCC-004-GITHUB-PUBLIC-RELEASE"
+    assert manifest["safety_summary"]["agenthub_modified"] is False
+    assert manifest["safety_summary"]["secrets_read"] is False
+    assert manifest["next_stage"] == "optional-profile-pin-or-agenthub-integration"
 
 
 def test_agenthub_readiness_docs_exist():

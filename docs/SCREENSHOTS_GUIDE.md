@@ -1,8 +1,8 @@
 # Screenshots Guide
 
-WCC-003 plans the screenshots needed for a future GitHub public showcase. This stage does not create or fake screenshot files.
+WCC-004 captures the screenshots needed for the GitHub public showcase.
 
-Actual screenshots should be captured during `WCC-004-GITHUB-PUBLIC-RELEASE` after the local UI is reviewed.
+The screenshot filenames below are fixed and are referenced by `README.md`.
 
 ## Screenshot Rules
 
@@ -120,9 +120,9 @@ Suggested UI state:
 - Select `Delivery report` or `Checklist`.
 - Show the download buttons and Markdown preview.
 
-## WCC-003 Status
+## WCC-004 Status
 
 - Screenshot guide ready: yes
-- Actual screenshots ready: no
+- Actual screenshots ready: yes
 - Screenshots directory: `screenshots/`
-- Current screenshot placeholder: `screenshots/.gitkeep`
+- Screenshot count: 8

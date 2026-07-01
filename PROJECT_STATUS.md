@@ -2,9 +2,9 @@
 
 ## Current Checkpoint
 
-`WCC-003-GITHUB-SHOWCASE-PREP-COMPLETE`
+`WCC-004-GITHUB-PUBLIC-RELEASE-COMPLETE`
 
-WorkflowCommandCenterAgent has completed WCC-003 as a GitHub showcase preparation stage. It is prepared for a future GitHub public release pass, but it has not been published, pushed, profile pinned, or integrated into AgentHubControlCenter.
+WorkflowCommandCenterAgent has completed WCC-004 as a GitHub public showcase release. The repo is published publicly, the README includes eight real Streamlit screenshots, local validation passed, and online GitHub README / screenshot verification is recorded in the release manifest.
 
 ## WCC-001 Completed
 
@@ -41,7 +41,6 @@ WCC-002 prepared local AgentHub readiness:
 - Enhanced `release/public_showcase_manifest.json`
 - Added `docs/AGENTHUB_INTEGRATION.md`
 - Added `docs/WCC_002_AGENTHUB_READINESS.md`
-- Updated README and status docs
 - Added AgentHub readiness tests
 - Did not modify `F:\AIProjects\AgentHubControlCenter`
 
@@ -57,30 +56,52 @@ Final checkpoint:
 
 WCC-003 prepared GitHub showcase assets:
 
-- Added `docs/SCREENSHOTS_GUIDE.md`
-- Added `docs/PUBLIC_SHOWCASE_CHECKLIST.md`
-- Added `docs/WCC_003_GITHUB_SHOWCASE_PREP.md`
-- Added `screenshots/.gitkeep` as a placeholder only
-- Added `release/public_release_check.py`
-- Strengthened README project overview, showcase story, AgentHub distinction, safety model, validation, and roadmap
-- Updated `agent_manifest.json` to WCC-003
-- Updated `release/public_showcase_manifest.json` to `github-showcase-prep`
-- Updated app-facing checkpoint text to WCC-003
-- Updated WCC default starter/report values to WCC-003
-- Added showcase prep tests
+- Added screenshot guide
+- Added public showcase checklist
+- Added WCC-003 showcase prep summary
+- Added release prep check script
+- Strengthened README showcase story
+- Did not configure remote or push
 
-## Not Done In WCC-003
+Commit:
 
+`d706058 chore: prepare WorkflowCommandCenterAgent GitHub showcase assets`
+
+## WCC-004 Completed
+
+Final checkpoint:
+
+`WCC-004-GITHUB-PUBLIC-RELEASE-COMPLETE`
+
+GitHub repo:
+
+`https://github.com/CHENXJC/WorkflowCommandCenterAgent`
+
+Completed in WCC-004:
+
+- Captured 8 real Streamlit screenshots
+- Added screenshots to README
+- Updated `agent_manifest.json` to GitHub public showcase status
+- Updated `release/public_showcase_manifest.json` to GitHub public release status
+- Added `docs/WCC_004_GITHUB_PUBLIC_RELEASE.md`
+- Updated `release/public_release_check.py` for WCC-004 release checks
+- Added GitHub release readiness tests
+- Ran pytest, compileall, release check, app import check, and JSON parse checks
+- Created or connected the public GitHub repo
+- Pushed to `origin/main`
+- Verified GitHub README page
+- Verified all 8 screenshot raw URLs
+- Verified remote tree safety
+
+## Not Done In WCC-004
+
+- Did not Profile Pin
 - Did not modify `F:\AIProjects\AgentHubControlCenter`
-- Did not configure GitHub remote
-- Did not push
-- Did not complete GitHub public release
-- Did not profile pin
-- Did not claim screenshots are completed
+- Did not perform AgentHubControlCenter integration
 - Did not read `.env`, token, credential, cookie, password, or private data
 - Did not add real user data
-- Did not delete existing tests
-- Did not do large-scale refactor of WCC-001 / WCC-002 modules
+- Did not submit generated private outputs
+- Did not force push
 
 ## Validation Commands
 
@@ -101,12 +122,11 @@ python -m json.tool release/public_showcase_manifest.json
 - public release check prints `SUMMARY: PASS`
 - app import check prints `APP_IMPORT_OK`
 - both JSON manifests parse
-- `agent_manifest.json` keeps `hub_ready: true`
+- `agent_manifest.json` keeps `github_showcase_ready: true`
 - `agent_manifest.json` keeps `modifies_agent_hub: false`
-- `release/public_showcase_manifest.json` keeps `github_public_release_completed: false`
-- `release/public_showcase_manifest.json` keeps `screenshots_ready: false`
-- `release/public_showcase_manifest.json` keeps `screenshot_guide_ready: true`
-- `release/public_showcase_manifest.json` keeps `public_showcase_checklist_ready: true`
+- `release/public_showcase_manifest.json` keeps `github_public_release_completed: true`
+- `release/public_showcase_manifest.json` keeps `screenshots_ready: true`
+- `release/public_showcase_manifest.json` keeps `screenshot_count: 8`
 - `release/public_showcase_manifest.json` keeps `agenthub_modified: false`
 
 ## Safety Notes
@@ -115,19 +135,17 @@ python -m json.tool release/public_showcase_manifest.json
 - Demo data only
 - `.env`, credentials, tokens, browser cookies, and private files are not read
 - `outputs/`, caches, and local virtual environments are ignored by git
-- No remote push is part of WCC-003
-- WCC-003 is GitHub showcase prep, not GitHub public release
-- WCC-003 is still AgentHub-ready, not AgentHub-integrated
+- Public release is demo-safe
+- Profile Pin remains not completed
+- AgentHubControlCenter remains unmodified
 
 ## Next Stage Recommendation
 
-`WCC-004-GITHUB-PUBLIC-RELEASE`
+`optional-profile-pin-or-agenthub-integration`
 
-Recommended scope only when explicitly requested:
+Possible next steps:
 
-- Capture or add public-safe screenshots
-- Create or configure GitHub repository
-- Push demo-safe files
-- Verify remote README and manifest
-- Verify remote tree has no unsafe artifacts
-- Decide separately whether profile pin is appropriate
+- Decide whether this repo deserves a GitHub Profile Pin
+- Add GitHub About/topics if not already configured
+- Start a separate AgentHubControlCenter integration checkpoint
+- Otherwise pause the project as a completed public showcase

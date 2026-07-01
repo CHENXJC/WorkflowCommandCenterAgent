@@ -101,11 +101,11 @@
   {
     "project_name": "WorkflowCommandCenterAgent",
     "category": "workflow-orchestration",
-    "current_checkpoint": "WCC-003-GITHUB-SHOWCASE-PREP",
-    "status": "github-showcase-prep",
-    "github_status": "not-released",
-    "profile_pin_status": "not-ready",
-    "next_action": "Prepare WCC-004 GitHub public release only when explicitly requested.",
+    "current_checkpoint": "WCC-004-GITHUB-PUBLIC-RELEASE",
+    "status": "public-showcase",
+    "github_status": "public-showcase-complete",
+    "profile_pin_status": "not_pinned",
+    "next_action": "Optional profile pin decision or AgentHubControlCenter integration only when explicitly requested.",
     "priority": "high",
     "notes": "AI project execution command center using local demo data."
   }
