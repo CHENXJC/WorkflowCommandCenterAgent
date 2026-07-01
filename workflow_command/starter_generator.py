@@ -75,13 +75,15 @@ def build_default_wcc_starter() -> ProjectStarterRequest:
     return ProjectStarterRequest(
         project_name="WorkflowCommandCenterAgent",
         project_path=r"F:\AIProjects\WorkflowCommandCenterAgent",
-        checkpoint="WCC-001-LOCAL-MVP",
-        stage_goal="Create a local Streamlit MVP with workflow packs, checklists, demo status tracking, prompt library, reports, exports, tests, docs, and AgentHub-ready manifests.",
+        checkpoint="WCC-002-AGENTHUB-READINESS",
+        stage_goal="Prepare the local MVP for future AgentHubControlCenter recognition by enhancing manifest fields, integration docs, status docs, and readiness tests without modifying AgentHubControlCenter.",
         project_type="Local-first Streamlit AI workflow command center",
         files_to_read=[
             "README.md",
             "PROJECT_STATUS.md",
             "docs/PROJECT_PLAN.md",
+            "docs/AGENTHUB_INTEGRATION.md",
+            "docs/WCC_002_AGENTHUB_READINESS.md",
             "agent_manifest.json",
         ],
         allowed_actions=[
@@ -92,7 +94,7 @@ def build_default_wcc_starter() -> ProjectStarterRequest:
         ],
         blocked_actions=[
             "Do not read .env, credentials, tokens, browser cookies, or private files.",
-            "Do not modify F:\\AIProjects\\AgentHubControlCenter during WCC-001.",
+            "Do not modify F:\\AIProjects\\AgentHubControlCenter during WCC-002.",
             "Do not connect GitHub remote, push, or force push.",
             "Do not use git add .",
         ],
@@ -103,16 +105,16 @@ def build_default_wcc_starter() -> ProjectStarterRequest:
         git_policy=[
             "Run git status before staging.",
             "Stage explicit WCC project files only.",
-            "Commit message: feat: create WorkflowCommandCenterAgent local MVP",
+            "Commit message: chore: prepare WorkflowCommandCenterAgent for AgentHub readiness",
             "Do not push.",
         ],
         output_requirements=[
-            "Confirm whether WCC-001 is complete.",
-            "List core modules created.",
+            "Confirm whether WCC-002 is complete.",
+            "List manifest, docs, and test updates.",
             "Show Streamlit launch command.",
             "Report pytest and compileall results.",
             "Report git commit and push status.",
-            "Mark checkpoint as WCC-001-LOCAL-MVP-COMPLETE when complete.",
+            "Mark checkpoint as WCC-002-AGENTHUB-READINESS-COMPLETE when complete.",
         ],
     )
 

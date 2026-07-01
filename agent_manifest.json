@@ -3,12 +3,20 @@
   "display_name": "Workflow Command Center Agent",
   "chinese_name": "AI 工作流指令中台",
   "category": "workflow-orchestration",
+  "subcategory": "project-execution-command-center",
   "role_in_portfolio": "AI project execution command center",
-  "current_checkpoint": "WCC-001-LOCAL-MVP",
-  "status": "local-mvp",
+  "current_checkpoint": "WCC-002-AGENTHUB-READINESS",
+  "status": "agenthub-ready-local",
+  "lifecycle_stage": "local-mvp-agenthub-ready",
   "hub_ready": true,
   "modifies_agent_hub": false,
   "launch_command": "streamlit run app.py",
+  "local_path": "F:\\AIProjects\\WorkflowCommandCenterAgent",
+  "github_repo": "not_configured",
+  "github_showcase_ready": false,
+  "profile_pin_status": "not_applicable_yet",
+  "demo_mode": true,
+  "privacy_mode": "local-first-demo-data-only",
   "core_capabilities": [
     "Project Starter Generator",
     "Workflow Pack Builder",
@@ -18,7 +26,42 @@
     "Delivery Report Generator",
     "Markdown / TXT / JSON Export"
   ],
-  "demo_mode": true,
-  "privacy_mode": "local-first",
-  "github_showcase_ready": false
+  "key_modules": [
+    "workflow_command/starter_generator.py",
+    "workflow_command/workflow_packs.py",
+    "workflow_command/checklist_engine.py",
+    "workflow_command/status_tracker.py",
+    "workflow_command/prompt_library.py",
+    "workflow_command/delivery_report.py",
+    "workflow_command/exporters.py"
+  ],
+  "ui_tabs": [
+    "Command Center",
+    "Project Starter",
+    "Workflow Packs",
+    "Checklist Manager",
+    "Project Status",
+    "Prompt Library",
+    "Delivery Report",
+    "Export Center",
+    "About"
+  ],
+  "validation_commands": [
+    "python -m pytest -q",
+    "python -m compileall .",
+    "python -c \"import app; print('APP_IMPORT_OK')\""
+  ],
+  "last_validation": {
+    "checkpoint": "WCC-002-AGENTHUB-READINESS",
+    "pytest": "passed: 16 tests",
+    "compileall": "passed",
+    "app_import": "passed",
+    "validated_on": "2026-07-01"
+  },
+  "integration_notes": [
+    "AgentHubControlCenter can read this manifest in a future integration checkpoint.",
+    "WCC-002 only prepares this project's metadata and does not modify AgentHubControlCenter.",
+    "GitHub repository is not configured and public showcase release is not complete."
+  ],
+  "next_recommended_action": "WCC-003-GITHUB-SHOWCASE-PREP"
 }

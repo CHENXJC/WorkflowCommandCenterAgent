@@ -40,7 +40,7 @@ from workflow_command.workflow_packs import (
 )
 
 
-CHECKPOINT = "WCC-001-LOCAL-MVP"
+CHECKPOINT = "WCC-002-AGENTHUB-READINESS"
 
 
 def main() -> None:
@@ -55,7 +55,7 @@ def main() -> None:
     st.sidebar.caption("Local-first AI project execution command center")
     st.sidebar.metric("Checkpoint", CHECKPOINT)
     st.sidebar.success("AgentHub-ready manifest: true")
-    st.sidebar.info("WCC-001 does not modify AgentHubControlCenter.")
+    st.sidebar.info("WCC-002 prepares readiness only; it does not modify AgentHubControlCenter.")
 
     tabs = st.tabs(
         [
@@ -105,10 +105,11 @@ def render_command_center() -> None:
     col3.metric("Prompt Categories", len(list_prompt_categories(prompts)))
     col4.metric("Hub Ready", "Yes")
 
-    st.subheader("WCC-001 Scope")
+    st.subheader("WCC-002 Scope")
     st.write(
         "This local MVP generates Codex-ready project instructions, reusable workflow packs, "
-        "execution checklists, demo project status views, prompt/rule records, and delivery reports."
+        "execution checklists, demo project status views, prompt/rule records, and delivery reports. "
+        "WCC-002 adds AgentHub-ready manifest and documentation fields for future recognition."
     )
 
     st.subheader("Portfolio Control Boundary")
@@ -118,7 +119,7 @@ def render_command_center() -> None:
             """
 - Local-first and demo-data-only
 - Designed for AI Agent / AI Skill portfolio execution
-- AgentHub-compatible manifest included
+- AgentHub-ready manifest enhanced
 - Markdown, text, and JSON exports available
 """
         )
@@ -128,7 +129,7 @@ def render_command_center() -> None:
 - Does not modify `F:\\AIProjects\\AgentHubControlCenter`
 - Does not read `.env`, tokens, browser cookies, or private files
 - Not a GitHub release checkpoint
-- Not a commercial client delivery version
+- Not a profile pin checkpoint
 """
         )
 
@@ -326,9 +327,9 @@ around concrete AI Agent delivery checkpoints.
     st.subheader("Current Boundary")
     st.markdown(
         """
-- Current checkpoint: `WCC-001-LOCAL-MVP`
+- Current checkpoint: `WCC-002-AGENTHUB-READINESS`
 - Uses demo data only
-- AgentHub-ready manifest exists
+- AgentHub-ready manifest has been enhanced
 - Does not modify `F:\\AIProjects\\AgentHubControlCenter`
 - GitHub public release is a later checkpoint
 """

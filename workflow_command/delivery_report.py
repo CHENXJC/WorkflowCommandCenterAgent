@@ -40,20 +40,22 @@ def generate_delivery_report_markdown(payload: DeliveryReportInput | dict[str, A
 def build_demo_delivery_report() -> DeliveryReportInput:
     return DeliveryReportInput(
         project_name="WorkflowCommandCenterAgent",
-        checkpoint="WCC-001-LOCAL-MVP",
-        stage_goal="Create a local-first Streamlit MVP for Codex-ready project execution workflows.",
+        checkpoint="WCC-002-AGENTHUB-READINESS",
+        stage_goal="Prepare WorkflowCommandCenterAgent for future AgentHubControlCenter recognition without modifying the hub repo.",
         completed_items=[
-            "Created project starter generator.",
-            "Created reusable workflow packs.",
-            "Created checklist manager.",
-            "Created demo project status tracker.",
-            "Created prompt/rule library.",
-            "Created delivery report and export modules.",
+            "Enhanced agent_manifest.json for AgentHub readiness.",
+            "Enhanced release/public_showcase_manifest.json with local release boundary.",
+            "Created AgentHub integration documentation.",
+            "Created WCC-002 readiness summary.",
+            "Updated README and PROJECT_STATUS.",
+            "Added AgentHub readiness tests.",
         ],
         modified_files=[
             "app.py",
             "workflow_command/",
-            "data/",
+            "data/demo_projects.json",
+            "docs/AGENTHUB_INTEGRATION.md",
+            "docs/WCC_002_AGENTHUB_READINESS.md",
             "docs/PROJECT_PLAN.md",
             "README.md",
             "PROJECT_STATUS.md",
@@ -63,14 +65,15 @@ def build_demo_delivery_report() -> DeliveryReportInput:
         validation_results=[
             "python -m pytest -q",
             "python -m compileall .",
+            "python -c \"import app; print('APP_IMPORT_OK')\"",
             "JSON manifest parse checks",
         ],
         risks=[
-            "WCC-001 uses demo data only and does not modify AgentHubControlCenter.",
+            "WCC-002 uses demo data only and does not modify AgentHubControlCenter.",
             "GitHub release and profile pin are intentionally out of scope.",
         ],
-        git_status_summary="Local-only repository; no remote push required for WCC-001.",
-        next_recommended_action="WCC-002 AgentHub readiness polish without modifying AgentHubControlCenter until explicitly requested.",
+        git_status_summary="Local-only repository; no remote push required for WCC-002.",
+        next_recommended_action="WCC-003 GitHub showcase prep after local readiness validation.",
     )
 
 

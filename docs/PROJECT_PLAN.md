@@ -71,19 +71,24 @@ Explicitly out of scope:
 
 ### WCC-002-AGENTHUB-READINESS
 
-Potential scope:
+Completed scope:
 
 - Refine `agent_manifest.json`
 - Add richer capability and status metadata
 - Add compatibility notes for AgentHubControlCenter
-- Add import/export contract examples
-- Add screenshot guide for future integration story
+- Add future integration documentation
+- Add WCC-002 readiness summary
+- Add tests for manifest and readiness docs
 
 Boundary:
 
-- Still do not modify `F:\AIProjects\AgentHubControlCenter` unless explicitly requested.
+- Did not modify `F:\AIProjects\AgentHubControlCenter`.
 
-### WCC-003-SHOWCASE-PREP
+Final checkpoint:
+
+`WCC-002-AGENTHUB-READINESS-COMPLETE`
+
+### WCC-003-GITHUB-SHOWCASE-PREP
 
 Potential scope:
 
@@ -150,9 +155,9 @@ python -m json.tool release/public_showcase_manifest.json
 - No credentials or tokens
 - No browser cookies
 - No private project file scanning
-- No remote GitHub push in WCC-001
-- No AgentHubControlCenter modification in WCC-001
+- No remote GitHub push in WCC-001 or WCC-002
+- No AgentHubControlCenter modification in WCC-001 or WCC-002
 
-## WCC-001 AgentHub Boundary
+## WCC-002 AgentHub Boundary
 
-WCC-001 only creates AgentHub-ready fields inside this project. It does not edit, import from, or write to `F:\AIProjects\AgentHubControlCenter`.
+WCC-002 prepares AgentHub-ready fields and documentation inside this project. It does not edit, import from, or write to `F:\AIProjects\AgentHubControlCenter`.

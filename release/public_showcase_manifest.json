@@ -1,10 +1,35 @@
 {
   "project_name": "WorkflowCommandCenterAgent",
-  "checkpoint": "WCC-001-LOCAL-MVP",
-  "release_stage": "local-mvp",
+  "current_checkpoint": "WCC-002-AGENTHUB-READINESS",
+  "release_stage": "local-mvp-agenthub-readiness",
+  "github_public_release_completed": false,
   "public_release_completed": false,
+  "github_repo": "not_configured",
   "github_showcase_ready": false,
+  "profile_pin_status": "not_applicable_yet",
   "profile_pin_ready": false,
+  "agenthub_readiness": {
+    "ready_for_future_registry_entry": true,
+    "manifest_fields_enhanced": true,
+    "integration_documentation_created": true,
+    "target_integration_project": "F:\\AIProjects\\AgentHubControlCenter"
+  },
+  "agenthub_modified": false,
+  "validation_summary": {
+    "pytest": "passed: 16 tests",
+    "compileall": "passed",
+    "app_import": "passed",
+    "validated_on": "2026-07-01"
+  },
+  "safety_summary": {
+    "local_first": true,
+    "demo_data_only": true,
+    "agenthub_modified": false,
+    "remote_configured": false,
+    "pushed": false,
+    "secrets_read": false
+  },
+  "next_stage": "WCC-003-GITHUB-SHOWCASE-PREP",
   "demo_data_only": true,
   "local_first": true,
   "unsafe_artifacts_expected": false,
@@ -18,8 +43,10 @@
     ".streamlit/secrets.toml"
   ],
   "notes": [
-    "WCC-001 is a local MVP checkpoint, not a GitHub release.",
-    "AgentHub-ready fields are reserved inside this project only.",
-    "This stage does not modify F:\\AIProjects\\AgentHubControlCenter."
+    "WCC-002 is a local MVP plus AgentHub readiness checkpoint, not a GitHub public release.",
+    "The goal is to standardize this project's manifest for future AgentHubControlCenter recognition.",
+    "This stage does not modify F:\\AIProjects\\AgentHubControlCenter.",
+    "No GitHub remote is configured and no push has been performed.",
+    "Profile pin is not applicable until a later public showcase stage."
   ]
 }

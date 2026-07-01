@@ -83,7 +83,7 @@
     "status": "active-platform",
     "github_status": "local-project",
     "profile_pin_status": "not-ready",
-    "next_action": "Continue HUB roadmap separately; WCC-001 must not modify this repo.",
+    "next_action": "Continue HUB roadmap separately; WCC-002 must not modify this repo.",
     "priority": "high",
     "notes": "Future hub integration target for WorkflowCommandCenterAgent."
   },
@@ -101,11 +101,11 @@
   {
     "project_name": "WorkflowCommandCenterAgent",
     "category": "workflow-orchestration",
-    "current_checkpoint": "WCC-001-LOCAL-MVP",
-    "status": "local-mvp",
+    "current_checkpoint": "WCC-002-AGENTHUB-READINESS",
+    "status": "agenthub-ready-local",
     "github_status": "not-released",
     "profile_pin_status": "not-ready",
-    "next_action": "Complete local MVP, then consider AgentHub readiness polish.",
+    "next_action": "Prepare WCC-003 GitHub showcase prep after AgentHub readiness validation.",
     "priority": "high",
     "notes": "AI project execution command center using local demo data."
   }

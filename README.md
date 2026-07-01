@@ -36,9 +36,53 @@ The goal is to help an AI product creator or automation consultant turn repeated
 - Markdown / TXT / JSON export helpers
 - AgentHub-ready `agent_manifest.json`
 
+## Current Status
+
+- Current checkpoint: `WCC-002-AGENTHUB-READINESS-COMPLETE`
+- Stage type: local MVP plus AgentHub readiness
+- GitHub public release: not completed
+- GitHub remote: not configured
+- Profile pin: not applicable yet
+- Demo mode: yes
+- Privacy mode: local-first demo data only
+
+## Portfolio Role
+
+WorkflowCommandCenterAgent is the project execution command center in the AI Agent portfolio matrix.
+
+It supports repeated delivery work: project start instructions, continuation instructions, workflow packs, execution checklists, status summaries, prompt/rule records, and delivery reports.
+
+## AgentHub Readiness
+
+WCC-002 enhances the internal manifest contract so AgentHubControlCenter can recognize this project in a future integration checkpoint.
+
+AgentHub-ready fields now include:
+
+- `subcategory`
+- `lifecycle_stage`
+- `local_path`
+- `github_repo`
+- `profile_pin_status`
+- `key_modules`
+- `ui_tabs`
+- `validation_commands`
+- `last_validation`
+- `integration_notes`
+- `next_recommended_action`
+
+This is readiness only. WCC-002 does not modify `F:\AIProjects\AgentHubControlCenter`.
+
+## Difference From AgentHubControlCenter
+
+AgentHubControlCenter = portfolio visibility / agent registry.
+
+WorkflowCommandCenterAgent = project execution / Codex instruction command center.
+
+AgentHubControlCenter should show which agents exist, their status, priority, and next actions. WorkflowCommandCenterAgent helps generate the concrete instruction packs, checklist items, and reports used to execute those next actions.
+
 ## Demo / Screenshot Area
 
-WCC-001 focuses on local MVP functionality. Screenshots can be added in a later GitHub showcase checkpoint after UI review.
+WCC-002 focuses on local MVP plus AgentHub readiness. Screenshots can be added in a later GitHub showcase checkpoint after UI review.
 
 Recommended future screenshots:
 
@@ -80,7 +124,9 @@ WorkflowCommandCenterAgent/
 │  ├─ demo_workflow_packs.json
 │  └─ demo_prompts.json
 ├─ docs/
-│  └─ PROJECT_PLAN.md
+│  ├─ PROJECT_PLAN.md
+│  ├─ AGENTHUB_INTEGRATION.md
+│  └─ WCC_002_AGENTHUB_READINESS.md
 ├─ tests/
 ├─ release/
 │  └─ public_showcase_manifest.json
@@ -103,17 +149,9 @@ It does not read real private project files, `.env`, tokens, credentials, browse
 
 ## AgentHub Future Integration
 
-WCC-001 includes `agent_manifest.json` with AgentHub-ready fields such as `hub_ready`, `modifies_agent_hub`, `launch_command`, and `core_capabilities`.
+WCC-002 includes an enhanced `agent_manifest.json` with AgentHub-ready fields such as `subcategory`, `lifecycle_stage`, `local_path`, `key_modules`, `ui_tabs`, `last_validation`, and `integration_notes`.
 
-Important boundary: WCC-001 does not modify `F:\AIProjects\AgentHubControlCenter`. Actual AgentHub integration should be a later checkpoint after the local MVP is stable.
-
-## Current MVP Status
-
-- Current checkpoint: `WCC-001-LOCAL-MVP-COMPLETE`
-- Stage type: local MVP
-- GitHub showcase ready: no
-- Profile pin ready: no
-- Demo mode: yes
+Important boundary: WCC-002 does not modify `F:\AIProjects\AgentHubControlCenter`. Actual AgentHub integration should be a later checkpoint after this project is stable and explicitly approved.
 
 ## Safety Boundary
 
@@ -121,17 +159,25 @@ Important boundary: WCC-001 does not modify `F:\AIProjects\AgentHubControlCenter
 - Demo data only
 - No `.env` reads
 - No secret, token, cookie, or credential access
-- No remote GitHub push in WCC-001
-- No modification to `AgentHubControlCenter` in WCC-001
+- No remote GitHub push in WCC-002
+- No modification to `AgentHubControlCenter` in WCC-002
 - No production SaaS or client delivery claims
+
+## Validation Commands
+
+```powershell
+cd F:\AIProjects\WorkflowCommandCenterAgent
+python -m pytest -q
+python -m compileall .
+python -c "import app; print('APP_IMPORT_OK')"
+```
 
 ## Future Roadmap
 
-- `WCC-002-AGENTHUB-READINESS`: polish manifest/status fields and prepare integration contract
-- `WCC-003-SHOWCASE-PREP`: screenshot guide, README polish, public safety manifest, release checklist
+- `WCC-003-GITHUB-SHOWCASE-PREP`: screenshot guide, README polish, public safety manifest, release checklist
 - `WCC-004-GITHUB-PUBLIC`: publish demo-safe GitHub public showcase when explicitly requested
 - Later: optional AgentHubControlCenter integration after approval
 
 ## Disclaimer
 
-WorkflowCommandCenterAgent is a local workflow and portfolio execution tool. It is not a secure secrets manager, not an account automation system, and not a production SaaS platform in WCC-001.
+WorkflowCommandCenterAgent is a local workflow and portfolio execution tool. It is not a secure secrets manager, not an account automation system, and not a production SaaS platform in WCC-002.
