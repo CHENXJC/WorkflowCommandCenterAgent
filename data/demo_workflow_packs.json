@@ -1,0 +1,209 @@
+[
+  {
+    "pack_name": "New Agent MVP Pack",
+    "category": "project-start",
+    "purpose": "Create a local-first MVP for a new AI Skill or Agent portfolio project.",
+    "recommended_steps": [
+      "Confirm project positioning and MVP boundary",
+      "Create minimal local project structure",
+      "Implement core Python modules",
+      "Add demo data and safety boundaries",
+      "Build Streamlit product UI",
+      "Write focused tests and docs"
+    ],
+    "required_files": [
+      "README.md",
+      "PROJECT_STATUS.md",
+      "docs/PROJECT_PLAN.md",
+      "requirements.txt",
+      "tests/"
+    ],
+    "validation_commands": [
+      "python -m pytest -q",
+      "python -m compileall ."
+    ],
+    "risk_notes": [
+      "Keep MVP scoped and avoid premature SaaS architecture.",
+      "Use demo data only unless the user explicitly approves real data."
+    ],
+    "final_output_format": [
+      "Completed work",
+      "Modified files",
+      "Validation results",
+      "Safety check",
+      "Current checkpoint",
+      "Next recommended action"
+    ]
+  },
+  {
+    "pack_name": "GitHub Showcase Pack",
+    "category": "public-release",
+    "purpose": "Prepare a demo-safe GitHub public showcase release surface.",
+    "recommended_steps": [
+      "Audit README and screenshots",
+      "Check public showcase manifest",
+      "Confirm .gitignore excludes outputs and private data",
+      "Run secret and data safety checks",
+      "Update GitHub-ready project status",
+      "Prepare selected-file commit"
+    ],
+    "required_files": [
+      "README.md",
+      "docs/SCREENSHOTS_GUIDE.md",
+      "docs/PUBLIC_SHOWCASE_MANIFEST.md",
+      "release/public_showcase_manifest.json",
+      ".gitignore"
+    ],
+    "validation_commands": [
+      "python -m pytest -q",
+      "python -m compileall .",
+      "git status --short"
+    ],
+    "risk_notes": [
+      "Do not include .env, credentials, tokens, private screenshots, or generated outputs.",
+      "Do not push or modify remotes unless explicitly requested."
+    ],
+    "final_output_format": [
+      "Public safety result",
+      "Docs readiness",
+      "Git status",
+      "Release boundary",
+      "Next publish step"
+    ]
+  },
+  {
+    "pack_name": "Bugfix Pack",
+    "category": "maintenance",
+    "purpose": "Fix a scoped bug with reproduction, regression test, and minimal edit.",
+    "recommended_steps": [
+      "Read current status and issue description",
+      "Reproduce the bug",
+      "Locate the smallest responsible module",
+      "Patch the behavior",
+      "Add or update a focused regression test",
+      "Run validation commands"
+    ],
+    "required_files": [
+      "PROJECT_STATUS.md",
+      "README.md",
+      "tests/"
+    ],
+    "validation_commands": [
+      "python -m pytest -q",
+      "python -m compileall ."
+    ],
+    "risk_notes": [
+      "Avoid unrelated refactors.",
+      "Do not change public behavior beyond the bugfix unless required."
+    ],
+    "final_output_format": [
+      "Bug reproduced",
+      "Fix summary",
+      "Regression coverage",
+      "Validation result",
+      "Residual risk"
+    ]
+  },
+  {
+    "pack_name": "Status Sync Pack",
+    "category": "documentation",
+    "purpose": "Synchronize README, PROJECT_STATUS, planning docs, and manifest checkpoints.",
+    "recommended_steps": [
+      "Read all status-bearing docs",
+      "Identify checkpoint mismatches",
+      "Update only status and metadata fields",
+      "Validate JSON manifests",
+      "Run lightweight compile or parse checks",
+      "Report exact checkpoint"
+    ],
+    "required_files": [
+      "README.md",
+      "PROJECT_STATUS.md",
+      "docs/PROJECT_PLAN.md",
+      "agent_manifest.json",
+      "release/public_showcase_manifest.json"
+    ],
+    "validation_commands": [
+      "python -m compileall .",
+      "python -m json.tool agent_manifest.json",
+      "python -m json.tool release/public_showcase_manifest.json"
+    ],
+    "risk_notes": [
+      "Keep this pass metadata-only unless user asks for features.",
+      "Do not overstate GitHub or profile pin status."
+    ],
+    "final_output_format": [
+      "Files synchronized",
+      "Checkpoint before and after",
+      "Validation result",
+      "Next action"
+    ]
+  },
+  {
+    "pack_name": "Report Export Pack",
+    "category": "reporting",
+    "purpose": "Generate structured Markdown, text, and JSON delivery artifacts.",
+    "recommended_steps": [
+      "Define report audience and checkpoint",
+      "Collect completed items and validation results",
+      "Generate Markdown report",
+      "Generate JSON export for future tooling",
+      "Review safety and demo boundaries",
+      "Store only safe sample outputs"
+    ],
+    "required_files": [
+      "workflow_command/delivery_report.py",
+      "workflow_command/exporters.py",
+      "tests/test_delivery_report.py",
+      "tests/test_exporters.py"
+    ],
+    "validation_commands": [
+      "python -m pytest -q",
+      "python -m compileall ."
+    ],
+    "risk_notes": [
+      "Do not export private paths, secrets, or client data.",
+      "Keep generated artifacts out of GitHub unless they are intentional demo samples."
+    ],
+    "final_output_format": [
+      "Report sections",
+      "Export formats",
+      "Validation result",
+      "Safety note"
+    ]
+  },
+  {
+    "pack_name": "Commercial Delivery Pack",
+    "category": "commercial-readiness",
+    "purpose": "Convert a portfolio workflow into a bounded client delivery checklist without overbuilding.",
+    "recommended_steps": [
+      "Clarify target user and business pain",
+      "Separate demo features from delivery requirements",
+      "List local-first setup assumptions",
+      "Define handoff report structure",
+      "Identify privacy and data handling risks",
+      "Recommend a small paid pilot scope"
+    ],
+    "required_files": [
+      "README.md",
+      "PROJECT_STATUS.md",
+      "docs/PROJECT_PLAN.md",
+      "agent_manifest.json"
+    ],
+    "validation_commands": [
+      "python -m pytest -q",
+      "python -m compileall ."
+    ],
+    "risk_notes": [
+      "Do not promise automation over user accounts without explicit consent.",
+      "Do not treat a portfolio MVP as production SaaS."
+    ],
+    "final_output_format": [
+      "Business pain",
+      "Delivery scope",
+      "Excluded work",
+      "Risk boundary",
+      "Pilot next step"
+    ]
+  }
+]

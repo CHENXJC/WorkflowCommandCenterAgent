@@ -1,0 +1,24 @@
+{
+  "agent_name": "WorkflowCommandCenterAgent",
+  "display_name": "Workflow Command Center Agent",
+  "chinese_name": "AI 工作流指令中台",
+  "category": "workflow-orchestration",
+  "role_in_portfolio": "AI project execution command center",
+  "current_checkpoint": "WCC-001-LOCAL-MVP",
+  "status": "local-mvp",
+  "hub_ready": true,
+  "modifies_agent_hub": false,
+  "launch_command": "streamlit run app.py",
+  "core_capabilities": [
+    "Project Starter Generator",
+    "Workflow Pack Builder",
+    "Execution Checklist Manager",
+    "Demo Project Status Tracker",
+    "Prompt / Rule Library",
+    "Delivery Report Generator",
+    "Markdown / TXT / JSON Export"
+  ],
+  "demo_mode": true,
+  "privacy_mode": "local-first",
+  "github_showcase_ready": false
+}

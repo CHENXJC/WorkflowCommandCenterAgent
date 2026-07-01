@@ -1,0 +1,25 @@
+{
+  "project_name": "WorkflowCommandCenterAgent",
+  "checkpoint": "WCC-001-LOCAL-MVP",
+  "release_stage": "local-mvp",
+  "public_release_completed": false,
+  "github_showcase_ready": false,
+  "profile_pin_ready": false,
+  "demo_data_only": true,
+  "local_first": true,
+  "unsafe_artifacts_expected": false,
+  "excluded_from_public_release": [
+    ".env",
+    "credentials.json",
+    "token.json",
+    "outputs/",
+    "__pycache__/",
+    ".pytest_cache/",
+    ".streamlit/secrets.toml"
+  ],
+  "notes": [
+    "WCC-001 is a local MVP checkpoint, not a GitHub release.",
+    "AgentHub-ready fields are reserved inside this project only.",
+    "This stage does not modify F:\\AIProjects\\AgentHubControlCenter."
+  ]
+}

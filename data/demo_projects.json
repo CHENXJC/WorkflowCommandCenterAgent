@@ -1,0 +1,112 @@
+[
+  {
+    "project_name": "VideoExtractSkill",
+    "category": "content-extraction",
+    "current_checkpoint": "VIDEO-EXTRACT-039-LOCK",
+    "status": "paused-complete",
+    "github_status": "public-showcase-complete",
+    "profile_pin_status": "pinned",
+    "next_action": "Keep paused unless user explicitly reopens the project.",
+    "priority": "low",
+    "notes": "Batch video/image extraction skill; GitHub showcase and profile pin complete."
+  },
+  {
+    "project_name": "MarketSenseAgent",
+    "category": "market-automation",
+    "current_checkpoint": "MS-LOCK-036",
+    "status": "paused-local-v1",
+    "github_status": "local-workflow",
+    "profile_pin_status": "not-pinned",
+    "next_action": "Maintain local automation boundary; do not expand trading risk.",
+    "priority": "medium",
+    "notes": "Research and automation dashboard; no live trading or investment advice."
+  },
+  {
+    "project_name": "QuantLabAgent",
+    "category": "quant-research",
+    "current_checkpoint": "QUANTLAB-017-COMPLETE",
+    "status": "paused-complete",
+    "github_status": "public-showcase-complete",
+    "profile_pin_status": "pinned",
+    "next_action": "Keep as research and education showcase.",
+    "priority": "low",
+    "notes": "Backtesting and risk analysis demo; no real order execution."
+  },
+  {
+    "project_name": "SocialPainFinderAgent",
+    "category": "business-opportunity",
+    "current_checkpoint": "SPF-006-COMPLETE",
+    "status": "paused-complete",
+    "github_status": "public-showcase-complete",
+    "profile_pin_status": "pinned",
+    "next_action": "No feature expansion unless repositioning the portfolio matrix.",
+    "priority": "low",
+    "notes": "Social pain and commercial opportunity scoring agent."
+  },
+  {
+    "project_name": "CareerPilotAgent",
+    "category": "career-support",
+    "current_checkpoint": "CAREER-PIN-COMPLETE",
+    "status": "paused-complete",
+    "github_status": "public-showcase-complete",
+    "profile_pin_status": "pinned",
+    "next_action": "Keep paused after GitHub and profile pin completion.",
+    "priority": "low",
+    "notes": "Career planning and job-search assistance agent."
+  },
+  {
+    "project_name": "NewsSignalAgent",
+    "category": "news-analysis",
+    "current_checkpoint": "NEWS-008",
+    "status": "paused-showcase",
+    "github_status": "public-showcase-complete",
+    "profile_pin_status": "not-pinned",
+    "next_action": "Keep public but do not pin unless portfolio priorities change.",
+    "priority": "medium",
+    "notes": "News signal analysis showcase with README, screenshots, About, and topics complete."
+  },
+  {
+    "project_name": "BusinessOpsAgent",
+    "category": "business-ops",
+    "current_checkpoint": "BIZOPS-PIN-COMPLETE",
+    "status": "paused-complete",
+    "github_status": "public-showcase-complete",
+    "profile_pin_status": "pinned",
+    "next_action": "Keep paused after GitHub and profile pin completion.",
+    "priority": "low",
+    "notes": "Business workflow and operations analysis agent."
+  },
+  {
+    "project_name": "AgentHubControlCenter",
+    "category": "control-center",
+    "current_checkpoint": "HUB-005-REPORT",
+    "status": "active-platform",
+    "github_status": "local-project",
+    "profile_pin_status": "not-ready",
+    "next_action": "Continue HUB roadmap separately; WCC-001 must not modify this repo.",
+    "priority": "high",
+    "notes": "Future hub integration target for WorkflowCommandCenterAgent."
+  },
+  {
+    "project_name": "WorkflowPackAgent",
+    "category": "workflow-template",
+    "current_checkpoint": "WPA-DEMO",
+    "status": "candidate",
+    "github_status": "not-started",
+    "profile_pin_status": "not-ready",
+    "next_action": "Use as concept reference only; avoid duplicating WCC scope.",
+    "priority": "medium",
+    "notes": "Demo placeholder for reusable workflow pack thinking."
+  },
+  {
+    "project_name": "WorkflowCommandCenterAgent",
+    "category": "workflow-orchestration",
+    "current_checkpoint": "WCC-001-LOCAL-MVP",
+    "status": "local-mvp",
+    "github_status": "not-released",
+    "profile_pin_status": "not-ready",
+    "next_action": "Complete local MVP, then consider AgentHub readiness polish.",
+    "priority": "high",
+    "notes": "AI project execution command center using local demo data."
+  }
+]

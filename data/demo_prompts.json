@@ -1,0 +1,92 @@
+[
+  {
+    "title": "Codex New Project Start",
+    "category": "Codex Project Start",
+    "target_tool": "Codex",
+    "tags": ["project-start", "mvp", "local-first"],
+    "prompt_text": "Create the local MVP for the specified AI Agent project. Read project status files first, keep edits scoped, use demo data, add tests and docs, and report validation honestly.",
+    "usage_note": "Use when starting a new portfolio project with a clear checkpoint and path.",
+    "safety_note": "Do not read .env, credentials, private data, browser cookies, or unrelated repos."
+  },
+  {
+    "title": "Codex Continue Current Checkpoint",
+    "category": "Codex Continue Project",
+    "target_tool": "Codex",
+    "tags": ["continue", "checkpoint", "bounded-scope"],
+    "prompt_text": "Continue from the current checkpoint. Read AGENTS.md if present, then PROJECT_STATUS.md, README.md, and relevant docs. Avoid repeated work and make the smallest useful progress.",
+    "usage_note": "Use when a repo already has a known checkpoint and the next step is implied.",
+    "safety_note": "If the project is GitHub + Profile Pin complete, pause unless the user explicitly reopens it."
+  },
+  {
+    "title": "GitHub Public Release Prep",
+    "category": "GitHub Public Release",
+    "target_tool": "Codex",
+    "tags": ["github", "showcase", "safety"],
+    "prompt_text": "Prepare the repository for a public GitHub showcase. Confirm README, screenshots, manifest, .gitignore, safety boundary, tests, compile checks, and absence of secrets or private outputs.",
+    "usage_note": "Use after the local MVP is complete and the user explicitly asks for GitHub showcase work.",
+    "safety_note": "Do not push, modify remotes, or publish unless explicitly requested."
+  },
+  {
+    "title": "Screenshot And README Polish",
+    "category": "Screenshot / README Polish",
+    "target_tool": "Codex",
+    "tags": ["readme", "screenshots", "showcase"],
+    "prompt_text": "Polish the README and screenshot guide so the project value, target users, core workflow, local setup, and safety boundary are clear for public viewers.",
+    "usage_note": "Use when UI is stable enough to capture demo screenshots.",
+    "safety_note": "Use demo screenshots only and avoid private paths or account details."
+  },
+  {
+    "title": "Scoped Bugfix",
+    "category": "Bugfix",
+    "target_tool": "Codex",
+    "tags": ["bugfix", "test", "minimal-edit"],
+    "prompt_text": "Reproduce the bug, inspect the smallest responsible area, patch it, add a focused regression test, and run pytest plus compileall.",
+    "usage_note": "Use for concrete failing behavior, not vague feature expansion.",
+    "safety_note": "Do not use unrelated refactors as part of the bugfix."
+  },
+  {
+    "title": "Checkpoint Status Sync",
+    "category": "Status Sync",
+    "target_tool": "Codex",
+    "tags": ["status", "docs", "manifest"],
+    "prompt_text": "Synchronize README, PROJECT_STATUS, docs, and manifest fields with the actual implementation state. Do not overstate GitHub, pin, or production readiness.",
+    "usage_note": "Use after a milestone or before a release pass.",
+    "safety_note": "Keep it metadata-only unless feature work is explicitly requested."
+  },
+  {
+    "title": "Video Or Image Analysis Workflow",
+    "category": "Video / Image Analysis",
+    "target_tool": "ChatGPT or Codex",
+    "tags": ["ocr", "asr", "summary"],
+    "prompt_text": "Extract visible text, spoken content, key ideas, action items, and structured notes from provided media. Export a concise Markdown or document report.",
+    "usage_note": "Use for demo-safe media analysis or local files explicitly provided by the user.",
+    "safety_note": "Do not upload private media or expose personal information in public outputs."
+  },
+  {
+    "title": "Business Opportunity Analysis",
+    "category": "Business Analysis",
+    "target_tool": "ChatGPT",
+    "tags": ["pain-point", "market", "commercial"],
+    "prompt_text": "Analyze target users, pain points, repeated work, information gaps, willingness to pay, MVP scope, and portfolio showcase value.",
+    "usage_note": "Use during project positioning or commercial-readiness planning.",
+    "safety_note": "Separate portfolio demo claims from real client delivery claims."
+  },
+  {
+    "title": "Study And Assignment Support",
+    "category": "Study / Assignment Support",
+    "target_tool": "ChatGPT",
+    "tags": ["study", "outline", "draft"],
+    "prompt_text": "Help structure study notes or assignment drafts with clear arguments, examples, and source-aware reasoning while preserving the user's own final judgment.",
+    "usage_note": "Use for learning support, outline generation, and draft review.",
+    "safety_note": "Do not fabricate citations or submit work as if it were independently verified."
+  },
+  {
+    "title": "Outreach Email Draft",
+    "category": "Outreach / Email Draft",
+    "target_tool": "ChatGPT",
+    "tags": ["email", "outreach", "client"],
+    "prompt_text": "Draft a concise outreach email that states the target user's pain, a small automation offer, proof of capability, and a low-friction next step.",
+    "usage_note": "Use after a project has a stable portfolio demo and clear target user.",
+    "safety_note": "Do not send emails or automate account actions without explicit confirmation."
+  }
+]

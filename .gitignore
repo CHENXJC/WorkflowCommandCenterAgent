@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Local app and generated outputs
+.streamlit/secrets.toml
+outputs/*
+!outputs/.gitkeep
+*.log
+
+# Secrets and credentials
+.env
+.env.*
+credentials.json
+token.json
+*secret*
+*password*
+*api_key*
+
+# OS and editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
